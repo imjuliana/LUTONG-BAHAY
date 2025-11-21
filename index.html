@@ -96,35 +96,25 @@
         
         /* Enhanced Circular Logo Styles */
         .logo-image {
-            height: var(--logo-size);
-            width: var(--logo-size);
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid var(--secondary);
-            background: transparent;
-            clip-path: circle(50% at 50% 50%);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-            display: block;
-            transition: var(--transition);
-        }
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image fit perfectly */
+    border-radius: 50%;
+}
         
         .logo-placeholder {
-            width: var(--logo-size);
-            height: var(--logo-size);
-            background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            border-radius: 50%;
-            border: 3px solid var(--secondary);
-            font-size: calc(var(--logo-size) / 8);
-            text-align: center;
-            padding: 5px;
-            transition: var(--transition);
-        }
+    width: var(--logo-size);
+    height: var(--logo-size);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid var(--secondary);
+    padding: 5px;
+    transition: var(--transition);
+    overflow: hidden; /* Important for rounded corners */
+}
 
         #current-logo-preview img,
         .logo-preview,
@@ -1330,7 +1320,7 @@
             <div class="login-logo">
                 <div id="login-logo-container">
                     <div class="logo-placeholder">
-                        <img src="logo ulam.png" alt="logo">
+                        <img src="logo ulam.png" alt="logo" class="logo-image">
                     </div>
                 </div>
                 <div class="logo-text">LUTONG BAHAY</div>
